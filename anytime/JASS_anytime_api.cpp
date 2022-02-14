@@ -402,6 +402,8 @@ void JASS_anytime_api::anytime(JASS_anytime_thread_result &output, const JASS::d
 			Extract the query ID from the query
 		*/
 		auto end_of_id = query.find_first_of(seperators_between_id_and_query);
+std::cout << "Got" << end_of_id << " == " << std::string::npos << "\n";
+
 		if (end_of_id == std::string::npos)
 			query_id = "";
 		else
