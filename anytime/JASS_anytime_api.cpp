@@ -393,7 +393,7 @@ void JASS_anytime_api::anytime(JASS_anytime_thread_result &output, const JASS::d
 	size_t next_query = 0;
 	std::string query = JASS_anytime_query::get_next_query(query_list, next_query);
 	std::string query_id;
-
+stfd::cout << "Q:" << query << "\n";
 	while (query.size() != 0)
 		{
 		static const std::string seperators_between_id_and_query = " \t:";
@@ -414,7 +414,7 @@ void JASS_anytime_api::anytime(JASS_anytime_thread_result &output, const JASS::d
 				query = query.substr(end_of_id + start_of_query, std::string::npos);
 			}
 
-//std::cout << "QUERY:" << query_id << "\n";
+std::cout << "QUERY ID:" << query_id << "\n";
 		/*
 			Process the query
 		*/
